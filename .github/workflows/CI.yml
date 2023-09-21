@@ -25,23 +25,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - uses: pnpm/action-setup@v2
+      - name: Cache npm dependencies
+        uses: actions/cache@v2
         with:
-          version: 8
-          run_install: false
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: "~/.npm"
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+            ${{ runner.os }}-node-
       - name: Install dependencies
-        run: pnpm install
+        run: npm ci
         env:
           npm_config_arch: x64
       - name: Test with VS Code ${{ matrix.vscode-version }}
@@ -49,7 +41,7 @@ jobs:
         env:
           VSCODE_TEST_VERSION: ${{ matrix.vscode-version }}
         with:
-          run: pnpm test
+          run: npm test
 
   build:
     permissions:
@@ -68,24 +60,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - uses: pnpm/action-setup@v2
+      - name: Cache npm dependencies
+        uses: actions/cache@v2
         with:
-          version: 8
-          run_install: false
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: "~/.npm"
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+            ${{ runner.os }}-node-
       - name: Install dependencies (without binaries)
         run: |
-          pnpm install
+          npm ci
       - run: npx semantic-release --extends ./package.release.config.js
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
@@ -106,22 +90,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - uses: pnpm/action-setup@v2
+      - name: Cache npm dependencies
+        uses: actions/cache@v2
         with:
-          version: 8
-          run_install: false
-      - name: Get pnpm store directory
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: "~/.npm"
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-      - run: pnpm install
+            ${{ runner.os }}-node-
+      - run: npm ci
       - uses: actions/download-artifact@v3
       - run: npx semantic-release --extends ./publish.release.config.js
         if: github.event_name == 'push' || github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
