@@ -25,8 +25,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Install dependencies
-        run: npm ci
+        run: pnpm ci
         env:
           npm_config_arch: x64
       - name: Test with VS Code ${{ matrix.vscode-version }}
@@ -34,7 +37,7 @@ jobs:
         env:
           VSCODE_TEST_VERSION: ${{ matrix.vscode-version }}
         with:
-          run: npm test
+          run: pnpm test
 
   build:
     permissions:
@@ -53,9 +56,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Install dependencies (without binaries)
         run: |
-          npm ci
+          pnpm ci
       - run: npx semantic-release --extends ./package.release.config.js
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_TOKEN }}
@@ -76,7 +82,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - run: npm ci
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - run: pnpm ci
       - uses: actions/download-artifact@v3
       - run: npx semantic-release --extends ./publish.release.config.js
         if: github.event_name == 'push' || github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
