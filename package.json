@@ -1,0 +1,145 @@
+{
+  "name": "vscode-vs-outlining",
+  "displayName": "Visual Studio Outlining",
+  "description": "VS Code extension that adds Visual Studio outlining capabilities",
+  "version": "0.0.1",
+  "preview": false,
+  "publisher": "michaeljolley",
+  "license": "MIT",
+  "author": {
+    "name": "Michael Jolley",
+    "email": "mike@baldbeardedbuilder.com"
+  },
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "keywords": [
+    "collapse",
+    "fold",
+    "outlining",
+    "folding"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaeljolley/vscode-vs-outlining.git"
+  },
+  "homepage": "https://github.com/michaeljolley/vscode-vs-outlining#readme",
+  "galleryBanner": {
+    "color": "#373436",
+    "theme": "dark"
+  },
+  "icon": "resources/vscode-vs-outlining.png",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "submenu": "vscode-vs-outlining",
+        "command": "vscode-vs-outlining.collapseToDefinitions",
+        "title": "Collapse to Definitions"
+      },
+      {
+        "submenu": "vscode-vs-outlining",
+        "command": "vscode-vs-outlining.toggleOutliningExpansion",
+        "title": "Expand Outlines"
+      },
+      {
+        "submenu": "vscode-vs-outlining",
+        "command": "vscode-vs-outlining.toggleAllOutlining",
+        "title": "Toggle All Outlining"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "vscode-vs-outlining.submenu",
+          "group": "navigation@1000"
+        }
+      ],
+      "vscode-vs-outlining.submenu": [
+        {
+          "command": "vscode-vs-outlining.toggleOutliningExpansion",
+          "title": "Toggle Outlining Expansion",
+          "group": "vscode-vs-outlining@1"
+        },
+        {
+          "command": "vscode-vs-outlining.toggleAllOutlining",
+          "title": "Toggle All Outlining",
+          "group": "vscode-vs-outlining@2"
+        },
+        {
+          "command": "vscode-vs-outlining.collapseToDefinitions",
+          "title": "Collapse to Definitions",
+          "group": "vscode-vs-outlining@3"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "vscode-vs-outlining.submenu",
+        "label": "Outlining",
+        "when": "editorTextFocus",
+        "group": "navigation"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-vs-outlining.toggleOutliningExpansion",
+        "key": "ctrl+M M",
+        "mac": "cmd+M M",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "vscode-vs-outlining.toggleAllOutlining",
+        "key": "ctrl+M L",
+        "mac": "cmd+M L",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "vscode-vs-outlining.collapseToDefinitions",
+        "key": "ctrl+M O",
+        "mac": "cmd+M O",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "format": "npx prettier --write \"src/**/*.ts\"",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^12.0.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.82.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vscode/test-electron": "^2.2.3",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "eslint": "^8.34.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "semantic-release": "^22.0.1",
+    "semantic-release-stop-before-publish": "^1.0.0",
+    "semantic-release-vsce": "^5.6.1",
+    "typescript": "^4.9.5"
+  }
+}
