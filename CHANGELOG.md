@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/michaeljolley/vscode-vs-outlining/compare/v1.0.0...v1.0.1) (2023-09-22)
+
+
+### Bug Fixes
+
+* releases now depend on tests + build ([670fb3f](https://github.com/michaeljolley/vscode-vs-outlining/commit/670fb3f74de74b964e6621c1f9d900cfb8ae7b0c))
+
 # 1.0.0 (2023-09-21)
 
 
