@@ -46,4 +46,4 @@ Some things that will increase the chance that your pull request is accepted:
 - **Write/update tests.**
 - Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
-[readme]: README.md
+[readme]: https://github.com/MichaelJolley/vscode-vs-outlining/tree/main#readme
