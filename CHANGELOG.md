@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/michaeljolley/vscode-vs-outlining/compare/v1.0.1...v1.1.0) (2023-09-23)
+
+
+### Features
+
+* adding deployment to OpenVSIX ([8011173](https://github.com/michaeljolley/vscode-vs-outlining/commit/8011173ef68325bb2b6906d778540135f56152be))
+
 ## [1.0.1](https://github.com/michaeljolley/vscode-vs-outlining/compare/v1.0.0...v1.0.1) (2023-09-22)
 
 
