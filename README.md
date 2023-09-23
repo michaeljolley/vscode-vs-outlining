@@ -1,13 +1,10 @@
 # Visual Studio Outlining
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/v/MichaelJolley.vscode-vs-outlining)](https://marketplace.visualstudio.com/items?itemName=MichaelJolley.vscode-vs-outlining) [![Installs](https://img.shields.io/visual-studio-marketplace/i/MichaelJolley.vscode-vs-outlining?color=blue&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=MichaelJolley.vscode-vs-outlining) [![MIT](https://img.shields.io/badge/license-MIT-orange.png?color=blue&style=flat-round)](https://opensource.org/licenses/MIT)
 
 ![CI](https://img.shields.io/github/actions/workflow/status/michaeljolley/vscode-vs-outlining/CI.yml?logo=github)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.png?style=flat-round)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A simple extension that adds Visual Studio's outlining (code folding) to Visual
@@ -68,5 +65,3 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
