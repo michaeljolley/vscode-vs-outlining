@@ -1,3 +1,15 @@
+## [1.1.1](https://github.com/MichaelJolley/vscode-vs-outlining/compare/v1.1.0...v1.1.1) (2023-09-25)
+
+
+### Bug Fixes
+
+* dang casing in repo name ([b7ac412](https://github.com/MichaelJolley/vscode-vs-outlining/commit/b7ac41250721dbee9e1e2003aa476f0ef6162f27))
+
+
+### Performance Improvements
+
+* Collapses C#, ruby, TS, and JS moar better ([a5a7760](https://github.com/MichaelJolley/vscode-vs-outlining/commit/a5a7760841ff4df7681149392a9dc6a75d4989cf))
+
 # [1.1.0](https://github.com/michaeljolley/vscode-vs-outlining/compare/v1.0.1...v1.1.0) (2023-09-23)
 
 

@@ -2,7 +2,7 @@
   "name": "vscode-vs-outlining",
   "displayName": "Visual Studio Outlining",
   "description": "VS Code extension that adds Visual Studio outlining capabilities",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "preview": false,
   "publisher": "michaeljolley",
   "license": "MIT",
