@@ -13,8 +13,14 @@ export async function collapseToDefinitions() {
   let levels = 1;
 
   switch (language) {
-    case "csharp":
+    case "javascript":
+    case "typescript":
+    case "ruby":
       levels = 2;
+      break;
+
+    case "csharp":
+      levels = 3;
       break;
   }
 
