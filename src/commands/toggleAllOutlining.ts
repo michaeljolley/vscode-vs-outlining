@@ -1,3 +1,4 @@
+import { Telemetry } from "../telemetry";
 import { collapseToDefinitions } from "./collapseToDefinitions";
 import { toggleOutliningExpansion } from "./toggleOutliningExpansion";
 
@@ -11,4 +12,6 @@ export async function toggleAllOutlining() {
   }
 
   toggleState = !toggleState;
+
+  Telemetry.sendTelemetryEvent("toggleAllOutlining");
 }

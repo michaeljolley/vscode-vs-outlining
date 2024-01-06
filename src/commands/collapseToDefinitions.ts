@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import { Telemetry } from "../telemetry";
 
 export async function collapseToDefinitions() {
   const textEditor = vscode.window.activeTextEditor;
@@ -29,4 +30,6 @@ export async function collapseToDefinitions() {
 
   await vscode.commands.executeCommand("editor.unfoldAll");
   await vscode.commands.executeCommand("editor.foldLevel" + levels);
+
+  Telemetry.sendTelemetryEvent("collapseToDefinitions");
 }
