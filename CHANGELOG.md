@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/michaeljolley/vscode-vs-outlining/compare/v1.1.1...v1.2.0) (2024-01-06)
+
+
+### Features
+
+* Added telemetry that obeys VSC telemetry settings ([a18d15b](https://github.com/michaeljolley/vscode-vs-outlining/commit/a18d15b5439d7afb1eddf2f004e9ea9173a2216a))
+* Added tests to extension ([0ca5175](https://github.com/michaeljolley/vscode-vs-outlining/commit/0ca5175b6590dac778db329e720162ca158ea95d))
+
 ## [1.1.1](https://github.com/MichaelJolley/vscode-vs-outlining/compare/v1.1.0...v1.1.1) (2023-09-25)
 
 
