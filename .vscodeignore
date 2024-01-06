@@ -2,7 +2,7 @@
 .vscode-test/**
 .github/**
 src/**
-out/test/**
+out/**
 
 
 **/tsconfig.json
