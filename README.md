@@ -1,6 +1,6 @@
 # Visual Studio Outlining
 
-[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/MichaelJolley.vscode-vs-outlining)](https://marketplace.visualstudio.com/items?itemName=MichaelJolley.vscode-vs-outlining) [![Installs](https://img.shields.io/visual-studio-marketplace/i/MichaelJolley.vscode-vs-outlining?color=blue&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=MichaelJolley.vscode-vs-outlining) ![CI](https://img.shields.io/github/actions/workflow/status/michaeljolley/vscode-vs-outlining/CI.yml?logo=github) [![MIT](https://img.shields.io/badge/license-MIT-orange.png?color=blue&style=flat-round)](https://opensource.org/licenses/MIT)
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/MichaelJolley.vscode-vs-outlining)](https://marketplace.visualstudio.com/items?itemName=MichaelJolley.vscode-vs-outlining) [![Installs](https://img.shields.io/visual-studio-marketplace/i/MichaelJolley.vscode-vs-outlining?color=blue&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=MichaelJolley.vscode-vs-outlining) [![CI](https://img.shields.io/github/actions/workflow/status/michaeljolley/vscode-vs-outlining/CI.yml?logo=github)](https://github.com/michaeljolley/vscode-vs-outlining/actions/workflows/CI.yml) [![MIT](https://img.shields.io/badge/license-MIT-orange.png?color=blue&style=flat-round)](https://opensource.org/licenses/MIT)
 
 A simple extension that adds Visual Studio's outlining (code folding) to Visual
 Studio Code.
