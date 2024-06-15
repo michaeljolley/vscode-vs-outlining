@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/michaeljolley/vscode-vs-outlining/compare/v1.2.1...v1.2.2) (2024-06-15)
+
+
+### Bug Fixes
+
+* updating packages ([9df040a](https://github.com/michaeljolley/vscode-vs-outlining/commit/9df040a9039a2aea3f2519aa789923e71a5c2a18))
+
 ## [1.2.1](https://github.com/michaeljolley/vscode-vs-outlining/compare/v1.2.0...v1.2.1) (2024-01-06)
 
 
