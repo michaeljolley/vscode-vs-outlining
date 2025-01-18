@@ -7,8 +7,6 @@ export async function collapseToDefinitions() {
     return;
   }
 
-  const selection = textEditor.selection;
-
   const language =
     textEditor && textEditor.document && textEditor.document.languageId;
   let levels = 1;

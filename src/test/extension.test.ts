@@ -5,13 +5,22 @@ import * as assert from "assert";
 import * as vscode from "vscode";
 
 suite("Extension Activation Tests", () => {
-
   test("Commands are registered", () => {
-    vscode.commands.getCommands(true)
-    .then((commands) => {
-      assert.notEqual(commands.find((v) => v === "vscode-vs-outlining.collapseToDefinitions"), undefined);
-      assert.notEqual(commands.find((v) => v === "vscode-vs-outlining.toggleOutliningExpansion"), undefined);
-      assert.notEqual(commands.find((v) => v === "vscode-vs-outlining.toggleAllOutlining"), undefined);
+    vscode.commands.getCommands(true).then((commands) => {
+      assert.notEqual(
+        commands.find((v) => v === "vscode-vs-outlining.collapseToDefinitions"),
+        undefined,
+      );
+      assert.notEqual(
+        commands.find(
+          (v) => v === "vscode-vs-outlining.toggleOutliningExpansion",
+        ),
+        undefined,
+      );
+      assert.notEqual(
+        commands.find((v) => v === "vscode-vs-outlining.toggleAllOutlining"),
+        undefined,
+      );
     });
   });
 });
