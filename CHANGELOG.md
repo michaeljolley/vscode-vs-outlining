@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/michaeljolley/vscode-vs-outlining/compare/v1.3.0...v1.4.0) (2025-01-18)
+
+
+### Features
+
+* Updating packages ([1f4104a](https://github.com/michaeljolley/vscode-vs-outlining/commit/1f4104af6dda98674759accbe6e515f195ee980d))
+
 # [1.3.0](https://github.com/michaeljolley/vscode-vs-outlining/compare/v1.2.2...v1.3.0) (2025-01-18)
 
 
